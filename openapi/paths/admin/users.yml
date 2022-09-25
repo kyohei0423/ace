@@ -1,0 +1,8 @@
+post:
+  tags:
+    - users
+  summary: ログイン
+  operationId: loginUser
+  responses:
+    '200':
+      description: OK

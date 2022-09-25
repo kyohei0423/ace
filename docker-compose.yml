@@ -9,3 +9,19 @@ services:
     volumes:
       - ./backend:/var/www/backend
     command: "air -c .air.toml"
+  swagger-ui:
+    image: swaggerapi/swagger-ui:latest
+    ports:
+      - 82:8080
+    volumes:
+      - ./openapi:/usr/share/nginx/html/openapi
+    environment:
+      - URL=openapi/openapi.yml
+  # swagger-editor:
+  #   image: swaggerapi/swagger-editor:v4.4.1
+  #   ports:
+  #     - 82:8080
+  #   volumes:
+  #     - ./openapi/openapi.yml:/openapi.yml
+  #   environment:
+  #     SWAGGER_FILE: /openapi.yml
