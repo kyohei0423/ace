@@ -4,3 +4,9 @@ coverage
 
 # Ignore all HTML files:
 *.html
+
+*.json
+
+*.css
+
+yarn.lock
