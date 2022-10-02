@@ -2,5 +2,7 @@
   "eslint.packageManager": "yarn",
   "eslint.workingDirectories": [
     "./admin"
-  ]
+  ],
+  "openapi.defaultPreviewRenderer": "redoc",
+  "editor.formatOnSave": true
 }
