@@ -17,6 +17,16 @@ services:
       - ./openapi:/usr/share/nginx/html/openapi
     environment:
       - URL=openapi/openapi.yml
+
+  mock-server:
+    build:
+      context: ./openapi
+      dockerfile: Dockerfile
+    ports:
+      - 4011:4010
+    volumes:
+      - ./openapi:/openapi
+    command: "yarn mock"
   # swagger-editor:
   #   image: swaggerapi/swagger-editor:v4.4.1
   #   ports:
